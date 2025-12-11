@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser extension manager ui</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body >
+  <div class="page min-h-[100vh]">
+    <div class="container desktop:w-[1100px] mx-auto px-4 py-10">
+      <div class="bg-white px-3 py-2 rounded-xl mb-14">
+        <div class="img-wrapper flex justify-between items-center">
+          <img src="../assets/images/logo.svg">
+          <div class="h-[37px] w-[37px] bg-Neutral-100 grid place-items-center rounded-md hover:bg-Neutral-300 cursor-pointer duration-150 transition-colors" id="theme">
+            <img src="../assets/images/icon-moon.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="options mb-7">
+        <div class="bg-transparent flex flex-col gap-4 justify-between items-center mobile:flex-row">
+          <h3 class="font-noto font-bolder text-4xl text-center mobile:text-left title">
+            Extension List
+          </h3>
+          <div class="flex gap-2">
+            <button class="btn" id="allbtn">All</button>
+            <button class="btn" id="activebtn">Active</button>
+            <button class="btn" id="inactivebtn">Inactive</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="extensions-list-box bg-transparent" id="extentions-list-box">
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+
+            <img src="../assets/images/logo-devlens.svg" alt="devlens" class="logo">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">DevLens</h3>
+              <p class="text-sm text-neutral-600">Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+            <img src="../assets/images/logo-style-spy.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">StyleSpy</h3>
+              <p class="text-sm text-neutral-600">Instantly analyze and copy CSS from any webpage element.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+            <img src="../assets/images/logo-speed-boost.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">SpeedBoost</h3>
+              <p class="text-sm text-neutral-600">Optimizes browser resource usage to accelerate page loading.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+            <img src="../assets/images/logo-json-wizard.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">JSONWizard</h3>
+              <p class="text-sm text-neutral-600">Formats, validates, and prettifies JSON responses in-browser.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+            <img src="../assets/images/logo-tab-master-pro.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">TabMaster Pro</h3>
+              <p class="text-sm text-neutral-600">Organizes browser tabs into groups and sessions.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+            <img src="../assets/images/logo-viewport-buddy.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">ViewportBuddy</h3>
+              <p class="text-sm text-neutral-600">Simulates various screen resolutions directly within the browser.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+
+            <img src="../assets/images/logo-markup-notes.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">Markup Notes</h3>
+              <p class="text-sm text-neutral-600">Enables annotation and notes directly onto webpages for collaborative debugging.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+
+            <img src="../assets/images/logo-grid-guides.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">GridGuides</h3>
+              <p class="text-sm text-neutral-600">Overlay customizable grids and alignment guides on any webpage.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+
+            <img src="../assets/images/logo-palette-picker.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">Palette Picker</h3>
+              <p class="text-sm text-neutral-600">Instantly extracts color palettes from any webpage.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+
+            <img src="../assets/images/logo-link-checker.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">LinkChecker</h3>
+              <p class="text-sm text-neutral-600">Scans and highlights broken links on any page.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+
+            <img src="../assets/images/logo-dom-snapshot.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">DOM Snapshot</h3>
+              <p class="text-sm text-neutral-600">Capture and export DOM structures quickly.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extention">
+          <div class="flex gap-8 items-start">
+
+            <img src="../assets/images/logo-console-plus.svg" alt="devlens">
+            <div class="text-content">
+              <h3 class="font-bolder text-lg">ConsolePlus</h3>
+              <p class="text-sm text-neutral-600">Enhanced developer console with advanced filtering and logging.</p>
+            </div>
+          </div>
+          <div class="extention-buttons">
+            <button class="btn">Remove</button>
+            <div class="turn-on-off">
+              <div class="ball">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
